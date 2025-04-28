@@ -1,7 +1,8 @@
 package Candidatura;
-
-public class ProcessoSeletivo {
+import java.util.concurrent.ThreadLocalRandom;
+public class ProcessoSeletivo2 {
     public static void main(String[] args) {
+        selecaoCandidatos();
         
     }
     static void selecaoCandidatos() {
@@ -9,10 +10,23 @@ public class ProcessoSeletivo {
         
         int candidatosSelecionados = 0;
         int candidatosAtual=0;
-        while(candidatosSelecionados < 5) {
+        double salarioBase=2000;
+        while(candidatosSelecionados < 5 && candidatosAtual < candidatos.length) {
+            String candidato = candidatos[candidatosAtual];
+            double salarioPretendido = valorPretendido();
 
+            System.out.println("O candidato " + candidato + " Solicitou este valor de salário " + salarioPretendido);
+            if (salarioBase >= salarioPretendido) {
+                System.out.println("O candidato " + candidato + " foi selecionado para a vaga");
+            }
+            candidatosAtual ++;
         }
     }
+    static double valorPretendido() {
+        return ThreadLocalRandom.current().nextDouble(1800, 2200);
+
+    }
+    
     static void analisarCandidato(double salarioPretendido) {
         double salarioBase = 2000.0;
         if(salarioBase > salarioPretendido) {
