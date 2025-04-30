@@ -1,12 +1,10 @@
-//Para ler e escrever dados em Java, aqui na DIO padronizamos da seguinte forma:
-// * new Scanner(System.in): cria um leitor de Entradas, com métodos úteis com prefixo "next";
-// * System.out.println: Imprime um texto de Saída (Output) e pulando uma linha.
+//Para ler e escrever dados em CS, aqui na DIO padronizamos da seguinte forma:
+// * Console.ReadLine: cria um leitor de Entradas, com métodos úteis com prefixo "next";
+// * Console.WriteLine: Imprime um texto de Saída (Output) e pulando uma linha.
 
 using System;
-
 public class Desafio
 {
-
     public static void main()
     {
         //lê os valores de Entrada
